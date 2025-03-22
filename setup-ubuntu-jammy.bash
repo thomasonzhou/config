@@ -8,8 +8,8 @@ git clone https://github.com/wting/autojump.git
 cd autojump && ./install.py
 pip3 install thefuck --user
 
-echo "[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
+echo '[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
 
 # ros2 humble
 locale  # check for UTF-8
@@ -26,7 +26,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y ros-humble-desktop
 sudo apt install -y ros-dev-tools
-echo ". /opt/ros/humble/setup.bash" >> ~/.bashrc
+echo '. /opt/ros/humble/setup.bash' >> ~/.bashrc
 
 # vscode
 sudo apt-get install -y wget gpg
