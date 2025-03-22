@@ -1,7 +1,7 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git curl wget vim tmux terminator gparted \
 build-essential cmake \
-barrier firefox \
+firefox \
 python3-pip python3-venv python3-setuptools python3-dev python3-rosdep
 mkdir -p ~/src && cd ~/src
 git clone https://github.com/wting/autojump.git
@@ -47,3 +47,8 @@ git config --global alias.sw switch
 git config --global alias.p push
 git config --global user.name "Thomason Zhou"
 git config --global user.email "t95zhou@uwaterloo.ca"
+
+# barrier
+sudo apt install -y barrier
+cd ~/.local/share/barrier/SSL
+openssl req -x509 -nodes -days 365 -subj /CN=Barrier -newkey rsa:4096 -keyout Barrier.pem -out Barrier.pem
