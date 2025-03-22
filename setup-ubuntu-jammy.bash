@@ -1,6 +1,7 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git curl wget vim tmux terminator gparted \
 build-essential cmake \
+barrier firefox\
 python3-pip python3-venv python3-setuptools python3-dev python3-rosdep
 pip3 install thefuck --user
 mkdir -p ~/src && cd ~/src
