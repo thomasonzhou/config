@@ -29,11 +29,15 @@ sudo apt install -y ros-dev-tools
 echo ". /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 # vscode
-sudo apt install -y software-properties-common apt-transport-https wget
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt-get install -y wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+rm -f packages.microsoft.gpg
+sudo apt install -y apt-transport-https
 sudo apt update
-sudo apt install -y code
+sudo apt -y install code # or code-insiders
+
 
 # git
 git config --global alias.br branch
