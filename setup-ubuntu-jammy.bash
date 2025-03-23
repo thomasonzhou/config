@@ -1,6 +1,8 @@
-sudo apt update && sudo apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 sudo apt install -y git curl wget vim tmux terminator gparted \
-build-essential cmake \
+build-essential cmake libfuse2 \
+ffmpeg \
 firefox \
 python3-pip python3-venv python3-setuptools python3-dev python3-rosdep
 mkdir -p ~/src && cd ~/src
@@ -27,7 +29,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y ros-$ROS_DISTRO-desktop
 sudo apt install -y ros-dev-tools
-echo '. /opt/ros/$ROS_DISTRO/setup.bash' >> ~/.bashrc
+echo ". /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 
 # foxglove
 sudo apt install -y ros-$ROS_DISTRO-foxglove-bridge

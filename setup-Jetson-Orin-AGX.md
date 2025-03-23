@@ -64,3 +64,5 @@ Used [prebuilt kernel modules from jetsonhacks](https://github.com/jetsonhacks/j
 - HID_SENSOR_HUB
 - HID_SENSOR_ACCEL_3D
 - HID_SENSOR_GYRO_3D
+
+Flashed [RealSense firmware version 5.13.0.50](https://nvidia-isaac-ros.github.io/getting_started/hardware_setup/sensors/realsense_setup.html)
