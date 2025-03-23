@@ -1,18 +1,21 @@
 # Configuration Notes for Jetson Orin AGX 32GB
 
-## L4T Kernel Version
+
+## Software Versions
+On the Jetson Orin AGX:
 
 ```sh
-dpkg -l | grep 'nvidia-l4t-core'
+dpkg-query --show nvidia-l4t-core
+dpkg-query --show nvidia-jetpack
 ```
-
-ii  nvidia-l4t-core                                   36.4.3-20250107174145                       arm64        NVIDIA Core Package
+nvidia-l4t-core	36.4.3-20250107174145
+nvidia-jetpack	6.2+b77
 
 ## Base Install
 
 Host System: Ubuntu Jammy 22.04
 1. Installed Host components using SDK Manager
-2. Flashed Jetson Linux using SDK Manager
+2. Flashed Jetson Linux using SDK Manager (did not nstall Jetson SDK Components or Jetson Platform Services)
 
 3. Cloned config and ran 
 ```sh
@@ -28,7 +31,13 @@ sudo pip3 install -U jetson-stats
 
 ```sh
 sudo apt update
-sudo apt install nvidia-jetpack
+sudo apt install -y nvidia-jetpack
+```
+
+## OpenCV 4.10.
+
+```sh
+sudo apt install -y libatlas-base-dev
 ```
 
 ## Intel Realsense D435i
