@@ -53,6 +53,7 @@ git config --global alias.sw switch
 git config --global alias.p push
 git config --global user.name "Thomason Zhou"
 git config --global user.email "t95zhou@uwaterloo.ca"
+git config --global core.editor "vim"
 
 # barrier
 sudo apt install -y barrier
