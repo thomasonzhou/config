@@ -14,15 +14,17 @@ nvidia-jetpack	6.2+b77
 ## Base Install
 
 Host System: Ubuntu Jammy 22.04
-1. Installed Host components using SDK Manager
+1. Installed Host components using [NVIDIA SDK Manager](https://developer.nvidia.com/sdk-manager)
 2. Flashed Jetson Linux using SDK Manager (did not nstall Jetson SDK Components or Jetson Platform Services)
 
-3. Cloned config and ran 
+3. Cloned config and ran setup script
 ```sh
-./setup-ubuntu-jammy.bash
+git clone https://github.com/thomasonzhou/config.git
+cd config
+sudo ./setup-ubuntu-jammy.bash
 ```
 
-4. Installed jtop
+4. Installed [jtop](https://github.com/rbonghi/jetson_stats)
 ```sh
 sudo pip3 install -U jetson-stats
 ```
