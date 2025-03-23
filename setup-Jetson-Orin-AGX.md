@@ -34,10 +34,26 @@ sudo apt update
 sudo apt install -y nvidia-jetpack
 ```
 
-## OpenCV 4.10.
+## OpenCV 4.10.0 with CUDA
 
+Instructions from [jetsonhacks](https://www.youtube.com/watch?v=u0YXzRFXBWM)
+
+To see the CUDA version:
 ```sh
-sudo apt install -y libatlas-base-dev
+/usr/local/cuda/bin/nvcc --version
+```
+Cuda compilation tools, release 12.6, V12.6.68
+Build cuda_12.6.r12.6/compiler.34714021_0
+
+Using cu126 directory for CUDA 12.6:
+```sh
+cd ~/Downloads
+wget https://pypi.jetson-ai-lab.dev/jp6/cu126/opencv-contrib-python/4.10.0.86
+wget https://pypi.jetson-ai-lab.dev/jp6/cu126/opencv-python/4.10.0
+pip3 install opencv_contrib_python-4.10.0.86-cp310-cp310-linux_aarch64.whl
+pip3 install opencv_python-4.10.0-py3-none-any.whl 
+sudo apt install -y libhdf5-dev libtesseract-dev libatlas-base-dev
+echo "export PIP_INDEX_URL=https://pypi.jetson-ai-lab.dev/jp6/cu126" >> ~/.bashrc
 ```
 
 ## Intel Realsense D435i
