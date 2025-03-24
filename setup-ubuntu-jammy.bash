@@ -2,9 +2,9 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y git curl wget vim tmux terminator gparted \
 build-essential cmake libfuse2 \
-ffmpeg \
+ffmpeg vlc \
 firefox \
-python3-pip python3-venv python3-setuptools python3-dev python3-rosdep
+python3-pip python3-venv python3-setuptools python3-dev
 mkdir -p ~/src && cd ~/src
 git clone https://github.com/wting/autojump.git
 cd autojump && ./install.py
@@ -28,7 +28,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y ros-$ROS_DISTRO-desktop
-sudo apt install -y ros-dev-tools
+sudo apt install -y ros-dev-tools python3-rosdep
 echo ". /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 
 # foxglove
