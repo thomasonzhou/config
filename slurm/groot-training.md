@@ -1,5 +1,9 @@
 # GR00T N1 Fine Tuning on DGX
 
+```sh
+apt install -y ffmpeg libsm6 libxext6
+```
+
 ## Container creation with pyxis
 ```sh
 srun --nodes 1 --ntasks 1 --gpus 4 \
