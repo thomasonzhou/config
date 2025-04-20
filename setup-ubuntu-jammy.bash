@@ -60,3 +60,6 @@ sudo apt install -y barrier
 mkdir -p ~/.local/share/barrier/SSL
 cd ~/.local/share/barrier/SSL
 openssl req -x509 -nodes -days 365 -subj /CN=Barrier -newkey rsa:4096 -keyout Barrier.pem -out Barrier.pem
+
+# device permissions
+sudo adduser $USER dialout
